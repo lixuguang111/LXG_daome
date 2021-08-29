@@ -18,7 +18,7 @@ export default {
     },
     async created() {
         let {data:{data:{index:res}}} = await tabbar()
-        var list = ['/index','/class','zixun','/books','/my']
+        var list = ['/index','/class','/zixun','/books','/my']
         res.forEach((item,k) => {
             item.url = list[k]
         });

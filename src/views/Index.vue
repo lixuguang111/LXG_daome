@@ -100,7 +100,6 @@ export default {
         }
     },
     async created() {
-        let ress = await banner()  
         let {data:{data:res}} = await recommend()
         var imglist = ['10.png','11.png','12.jpeg','13.png']
         res[0].list.forEach((item,key) => {
@@ -115,7 +114,7 @@ export default {
             item.teacher_avatar = imglist2[key]
         });
         this.recommendlist = res
-        console.log(res);
+        console.log(data);
     },
 }
 </script>
