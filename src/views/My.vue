@@ -1,7 +1,7 @@
 <template>
-    <div class="my" @click="login">
+    <div class="my">
         <div class="my-top">
-            <p class="my-top-img"><img src="/img/02.png" alt=""></p>
+            <p @click="login" class="my-top-img"><img src="/img/02.png" alt=""></p>
             <p class="my-top-p" v-html="$store.state.text"></p>
             <div class="my-top-two">
                 <ul>
