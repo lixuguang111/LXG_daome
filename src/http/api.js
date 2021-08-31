@@ -1,5 +1,6 @@
 import service from './service'
 import request_url from './request'
+import request from './request'
 
 export function smsCode(arg){
     return service({
@@ -38,5 +39,12 @@ export function recommend(arg){
         url:request_url.recommend,
         data:arg,
         method:'get'
+    })
+}
+export function password(arg) {
+    return service({
+        url:request_url.password,
+        data:arg,
+        method:'post'
     })
 }

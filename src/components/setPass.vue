@@ -1,61 +1,49 @@
 <template>
-    <div class="login">
-        <div class="login-top">
-            <img src="/img/02.jpg" alt="">
-        </div>
-        <div class="fen"></div>
-        <!-- 验证码登录 -->
-        <div class="home-con" v-show="flag_show">
-          <div>
+    <div>
+         <div>
             <div class="home-con-phone">
                 <input type="text" placeholder="请输入手机号" v-model="value">
                 <span @click="huoqu" v-html="txt" :disabled="flag"></span>
             </div>
             <div class="home-con-duan">
-                <input type="text" placeholder="请输入短信验证码" v-model="password">
+                <input type="text" placeholder="请输入短信验证码" v-model="smsCode">
             </div>
-            <div class="home-con-wei">
-                <span>*未注册的手机号将自动注册</span>
-                <span @click="usePassword">使用密码登录</span>
+            <div class="home-con-duan">
+                <input type="text" placeholder="请输入密码" v-model="password">
             </div>
-            
           </div>
             
             <div class="home-con-login">
-                <p class="home-con-login-p" @click="login">登 录</p>
-                <p class="home-con-login-xieyi">
-                    <img src="/img/05.png" alt="">
-                    我同意<span>用户注册协议</span>和<span>隐私保护协议</span>
-                </p>
+                <p class="home-con-login-p" @click="login">确定</p>
             </div>
-        </div>
-        <!-- 验证码登录 -->
-        <!-- 密码登录 -->
-        <pass v-show="!flag_show" @sms="sms"></pass>
-        <!-- 密码登录 -->
     </div>
 </template>
-
 <script>
-import { smsCode, login } from "@/http/api";
-import pass from '@/components/password'
+import { smsCode, login, password } from "@/http/api";
 export default {
-  components:{
-    pass
-  },
   data() {
     return {
+      txt: "获取验证码",
       value: "",
       password: "",
-      txt: "获取验证码",
-      flag: false,
-      flag_show:true
+      smsCode: "",
+      flag: true
     };
   },
-  created() {},
   methods: {
-    sms(){
-      this.flag_show = !this.flag_show
+    async login() {
+      var obj = {
+        mobile:this.value,
+        password:this.password,
+        sms_code:this.smsCode
+      }
+      let res = await password(obj)
+      console.log(res);
+      if (res.data.code == 200) {
+        this.$router.go(-1)
+      } else {
+        
+      }
     },
     async huoqu() {
       var phoneReg = /^[1]([3-9])[0-9]{9}$/;
@@ -79,42 +67,11 @@ export default {
         let res = await smsCode(obj);
         console.log(res);
       }
-    },
-    async login() {
-      var obj = { mobile: this.value, type: 2, client: 1 };
-      let res = await login(obj);
-      var ob = JSON.parse(res.config.data);
-      var mobile = ob.mobile
-      this.$store.commit('log',mobile)
-      this.$router.go(-1)
-    },
-    usePassword(){
-      this.flag_show = false;
     }
   }
 };
 </script>
-
 <style>
-.login {
-  width: 375px;
-  height: auto;
-}
-.login-top {
-  margin-top: 10px;
-  width: 375px;
-  height: 255px;
-}
-.login-top img {
-  width: 100%;
-  height: 100%;
-}
-.fen {
-  margin-top: 20px;
-  width: 375px;
-  height: 20px;
-  background: rgb(221, 220, 220);
-}
 .home-con {
   width: 375px;
   height: 130px;

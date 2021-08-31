@@ -46,6 +46,14 @@ const routes = [
     name: 'Login',
     component:()=>import('@/components/Login')
   },
+  {
+    path:'/set',
+    component:()=>import('@/components/set')
+  },
+  {
+    path:'/setPass',
+    component:()=>import('@/components/setPass')
+  }
 ]
 
 const router = new VueRouter({
