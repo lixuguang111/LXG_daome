@@ -13,6 +13,7 @@ Vue.prototype.$http = axios
 import 'lib-flexible/flexible'
 // 全局引入按需引入UI库 vant
 import '@/plugins/vant'
+import '../public/iconfont/iconfont.css'
 new Vue({
   router,
   store,
