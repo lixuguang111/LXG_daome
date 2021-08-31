@@ -4,5 +4,6 @@ module.exports = {
     tabbar:'/nav/bottom',
     banner:'/banner',
     recommend:'/recommend/appIndex',
-    password:'/password'
+    password:'/password',
+    teachers:'/show-teachers'
 }

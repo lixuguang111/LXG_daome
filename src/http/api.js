@@ -48,3 +48,10 @@ export function password(arg) {
         method:'post'
     })
 }
+export function teachers(arg) {
+    return service({
+        url:request_url.teachers,
+        data:arg,
+        method:'get'
+    })
+}

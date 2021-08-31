@@ -19,9 +19,22 @@
                 :poppable="false"
                 :show-confirm="false"
                 :style="{ height: '430px' }"
-
             />
         </div>
+        <div class="recommend">
+          <div>
+            <p><span>|</span><span>好课推荐</span></p>
+            <p>更多<i></i></p>
+          </div>
+          <div class="dec">
+            <div class="img"></div>
+            <div class="des">
+              <p>论渣男的自我修养</p>
+              <p><span>1积分</span><span><button>去兑换</button></span></p>
+            </div>
+          </div>
+        </div>
+
     </div>
 </template>
 <script>
@@ -69,11 +82,7 @@ export default {};
   height: 100px;
   width: 90%;
   position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+  top: 120px;
   border-radius: 10px;
 }
 .calendar .van-calendar {
@@ -84,5 +93,8 @@ export default {};
   bottom: 0;
   margin: auto;
   border-radius: 10px;
+}
+.recommend{
+  margin-top: 250px;
 }
 </style>
