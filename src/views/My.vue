@@ -35,9 +35,11 @@
             <div><span>分销中心</span></div>
         </div>
         <div class="my-mess">
-            <div @click="toset"><span>设置</span></div>
             <div><span>消息中心</span></div>
-            
+            <div><span>地址管理</span></div>
+            <div><span>关于我们</span></div>
+            <div><span>意见反馈</span></div>
+            <div @click="toset"><span>设置</span></div>
         </div>
     </div>
 </template>
@@ -63,7 +65,7 @@ export default {
 .my {
   width: 100%;
   height: auto;
-  background-color: #ddd;
+  background-color: rgb(243, 243, 243);
 }
 .my-top {
   width: 375px;
@@ -172,6 +174,7 @@ export default {
 .my-mess {
   width: 100%;
   background-color: white;
+  margin-bottom: 100px;
 }
 .my-mess div {
   width: 100%;
