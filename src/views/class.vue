@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import teachers from '@/http/api'
+import {teachers,recommend} from '@/http/api'
 export default {
     data(){
         return{
@@ -16,7 +16,7 @@ export default {
 
     },
     async created(){
-        let res = await teachers()
+        let {data:{data:res}} = await recommend()
         console.log(res);
     }
 }
