@@ -13,7 +13,7 @@
     </div>
 </template>
 <script>
-import login from "@/http/api";
+import {login} from "@/http/api";
 export default {
   data() {
     return {

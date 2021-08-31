@@ -53,6 +53,10 @@ const routes = [
   {
     path:'/setPass',
     component:()=>import('@/components/setPass')
+  },
+  {
+    path:'/calendar',
+    component:()=>import('@/components/calendar')
   }
 ]
 

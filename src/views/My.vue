@@ -3,6 +3,7 @@
         <div class="my-top">
             <p @click="login" class="my-top-img"><img src="/img/02.png" alt=""></p>
             <p class="my-top-p" v-html="$store.state.text"></p>
+            <p class="sign" @click="toSgin"><i class="iconfont icon-document"></i>签到</p>
             <div class="my-top-two">
                 <ul>
                     <li>
@@ -55,6 +56,9 @@ export default {
     },
     toset(){
         this.$router.push('/set')
+    },
+    toSgin(){
+      this.$router.push('/calendar')
     }
   },
   created() {
@@ -66,6 +70,7 @@ export default {
   width: 100%;
   height: auto;
   background-color: rgb(243, 243, 243);
+  position: relative;
 }
 .my-top {
   width: 375px;
@@ -75,6 +80,21 @@ export default {
   background-size: 100%;
   text-align: center;
 }
+.my-top .sign{
+  width: 80px;
+  height: 20px;
+  background-color: dodgerblue;
+  color: white;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  border-radius: 10px 0px 0px 10px;
+  text-align: center;
+}
+ .my-top .sign .icon-document{
+   font-size: 10px;
+   margin-right: 10px;
+ }
 .my-top-img {
   width: 60px;
   height: 60px;

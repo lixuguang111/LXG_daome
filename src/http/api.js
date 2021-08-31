@@ -1,6 +1,6 @@
 import service from './service'
 import request_url from './request'
-import request from './request'
+// import request from './request'
 
 export function smsCode(arg){
     return service({
