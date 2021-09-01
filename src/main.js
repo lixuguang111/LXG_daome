@@ -8,7 +8,7 @@ console.log(baseUrl)
 Vue.config.productionTip = false
 
 import axios from 'axios'
-Vue.prototype.$http = axios
+Vue.prototype.$axios = axios
 // rem适配
 import 'lib-flexible/flexible'
 // 全局引入按需引入UI库 vant

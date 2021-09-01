@@ -26,15 +26,15 @@ export default {
       var obj = {
         mobile: this.mobile,
         type: 1,
-        client: 1
+        client: 1,
+        password:this.password
       };
       console.log(obj);
-      let res = await login(obj);
+      let {data:{data:res}} = await login(obj);
       console.log(res);
-      var ob = JSON.parse(res.config.data);
-      var mobile = ob.mobile;
-      this.$store.commit("log", mobile);
-      this.$router.go(-1);
+      
+      this.$store.commit("log", res.nickname);
+      this.$router.push('/my')
     },
     sms() {
       this.$emit("sms");

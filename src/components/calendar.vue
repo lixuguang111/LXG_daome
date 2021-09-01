@@ -21,7 +21,7 @@
                 :style="{ height: '430px' }"
             />
         </div>
-        <div class="recommend">
+        <!-- <div class="recommend">
           <div>
             <p><span>|</span><span>好课推荐</span></p>
             <p>更多<i></i></p>
@@ -33,12 +33,31 @@
               <p><span>1积分</span><span><button>去兑换</button></span></p>
             </div>
           </div>
-        </div>
+        </div> -->
 
     </div>
 </template>
 <script>
-export default {};
+import {data} from "@/http/api";
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+
+  },
+  async created(){
+    var dat = new Date()
+    var year = dat.getFullYear()
+    var month = dat.getMonth()
+    var day =  dat.getDate()
+    var time  = year+'-'+month+'-'+day
+    console.log(year);
+    console.log(time);
+    let res = data({data:time})
+    console.log(res);
+  }
+};
 </script>
 <style>
 #calendar {
@@ -94,7 +113,7 @@ export default {};
   margin: auto;
   border-radius: 10px;
 }
-.recommend{
+.recommend {
   margin-top: 250px;
 }
 </style>

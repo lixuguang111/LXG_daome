@@ -57,8 +57,22 @@ export function teachers(arg) {
 }
 export function teacher_des(arg) {
     return service({
-        url:request_url.teachers,
+        url:request_url.teacher_des,
         data:arg,
         method:'get'
+    })
+}
+export function data(arg) {
+    return service({
+        url:request_url.date,
+        data:arg,
+        method:'get'
+    })
+}
+export function classes(arg) {
+    return service({
+        url:request_url.classes,
+        data:arg,
+        method:'post'
     })
 }

@@ -81,11 +81,11 @@ export default {
       }
     },
     async login() {
-      var obj = { mobile: this.value, type: 2, client: 1 };
-      let res = await login(obj);
-      var ob = JSON.parse(res.config.data);
-      var mobile = ob.mobile
-      this.$store.commit('log',mobile)
+      var obj = { mobile: this.value, type: 2, client: 1,sms_code:this.password };
+      let {data:{data:res}} = await login(obj);
+      console.log(res);
+      
+      this.$store.commit('log',res.nickname)
       this.$router.go(-1)
     },
     usePassword(){

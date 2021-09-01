@@ -6,5 +6,7 @@ module.exports = {
     recommend:'/recommend/appIndex',
     password:'/password',
     teachers:'/teacher/search/attrs',
-    teacher_des:'/teacher'
+    teacher_des:'/teacher',
+    date:'/user/integral/signRecord',
+    classes:'/teacher/mainCourse'
 }

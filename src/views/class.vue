@@ -22,7 +22,7 @@ export default {
     },
     methods:{
         toDetail(item){
-            this.$router.push('/detail')
+            this.$router.push('/detail?id='+item.id)
             this.$store.commit('toDetail',item.id)
         }
     },
@@ -40,6 +40,7 @@ export default {
 #teachers{
     width: 100%;
     background-color: aliceblue;
+    margin-bottom: 60px;
 }
 .teachers{
     width: 90%;
@@ -51,6 +52,7 @@ export default {
     align-items: center;
     margin-top: 10px;
     margin-left: 5%;
+    border-radius: 5px;
 }
 .teachers .img {
     width: 20%;
