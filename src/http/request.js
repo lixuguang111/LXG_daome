@@ -5,5 +5,6 @@ module.exports = {
     banner:'/banner',
     recommend:'/recommend/appIndex',
     password:'/password',
-    teachers:'/show-teachers'
+    teachers:'/teacher/search/attrs',
+    teacher_des:'/teacher'
 }

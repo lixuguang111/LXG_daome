@@ -55,3 +55,10 @@ export function teachers(arg) {
         method:'get'
     })
 }
+export function teacher_des(arg) {
+    return service({
+        url:request_url.teachers,
+        data:arg,
+        method:'get'
+    })
+}

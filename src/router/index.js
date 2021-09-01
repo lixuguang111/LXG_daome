@@ -57,6 +57,10 @@ const routes = [
   {
     path:'/calendar',
     component:()=>import('@/components/calendar')
+  },
+  {
+    path:'/detail',
+    component:()=>import('@/components/detail')
   }
 ]
 

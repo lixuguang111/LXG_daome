@@ -8,7 +8,8 @@ export default new Vuex.Store({
     value: "",
     password: "",
     smsCode: "",
-    text: "登录/注册"
+    text: "登录/注册",
+    id:0
   },
   mutations: {
     login(state,data){
@@ -16,6 +17,10 @@ export default new Vuex.Store({
     },
     log(state,data){
       state.text = data
+    },
+    toDetail(state,data){
+      state.id = data
+      console.log(state.id);
     }
   },
   actions: {
