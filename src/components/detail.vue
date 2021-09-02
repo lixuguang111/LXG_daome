@@ -11,7 +11,7 @@
             <p class="des">{{teacher.introduction}}</p>
           </van-tab>
           <van-tab title="主讲课程">
-            <div v-for="(item,index) in class_list" :key="index" class="class_item">
+            <div v-for="(item,index) in class_list" :key="index" class="class_item" @click="toClasses(item.id)">
               <div class="img">
                 <img :src="item.cover_img" alt="">
               </div>
@@ -36,7 +36,8 @@ export default {
       id: 0,
       teacher: [],
       active: 0,
-      class_list: []
+      class_list: [],
+      id_class:0
     };
   },
   methods: {
@@ -59,9 +60,13 @@ export default {
       console.log(res);
       this.class_list = res.list;
       console.log(this.class_list);
+    },
+    toClasses(id){
+      this.$router.push('/classes?id='+id)
+      
     }
   },
-  created() {
+  created(id) {
     this.id = this.$store.state.id;
     console.log(this.id, "id");
     // this.id = this.$route.params.id

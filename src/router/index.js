@@ -61,6 +61,10 @@ const routes = [
   {
     path:'/detail',
     component:()=>import('@/components/detail')
+  },
+  {
+    path:'/classes',
+    component:()=>import('@/components/classes')
   }
 ]
 
