@@ -8,5 +8,8 @@ module.exports = {
     teachers:'/teacher/search/attrs',
     teacher_des:'/teacher',
     date:'/user/integral/signRecord',
-    classes:'/teacher/mainCourse'
+    classes:'/teacher/mainCourse',
+    title:'/information/classify',
+    content:'/information/index',
+    zx_detail:'/information/detail'
 }

@@ -1,5 +1,26 @@
 import Vue from 'vue'
-import { Button, List, Cell, Tabbar, TabbarItem, Field, Form, Notify, Toast, Search, Card, SwipeItem, Swipe, Icon, CellGroup, Calendar, Tab, Tabs, Collapse, CollapseItem, Empty } from 'vant'
+import {
+    Button,
+    List,
+    Cell,
+    Tabbar,
+    TabbarItem,
+    Field, Form,
+    Notify,
+    Toast,
+    Search,
+    Card,
+    SwipeItem,
+    Swipe,
+    Icon,
+    CellGroup,
+    Calendar,
+    Tab,
+    Tabs,
+    Collapse,
+    CollapseItem,
+    Empty
+} from 'vant'
 Vue.use(Button)
 Vue.use(Cell)
 Vue.use(List)

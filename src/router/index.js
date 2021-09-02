@@ -65,6 +65,10 @@ const routes = [
   {
     path:'/classes',
     component:()=>import('@/components/classes')
+  },
+  {
+    path:'/zx_detail',
+    component:()=>import('@/components/zx_detail')
   }
 ]
 

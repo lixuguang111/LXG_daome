@@ -76,3 +76,24 @@ export function classes(arg) {
         method:'post'
     })
 }
+export function Service(arg) {
+    return service({
+        url:request_url.title,
+        data:arg,
+        method:'get'
+    })
+}
+export function content(arg) {
+    return service({
+        url:request_url.content,
+        data:arg,
+        method:'post'
+    })
+}
+export function zx_detail(arg) {
+    return service({
+        url:request_url.zx_detail,
+        data:arg,
+        method:'post'
+    })
+}
